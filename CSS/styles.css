@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Grape+Nuts&family=Manrope:wght@200;300;400&family=Montserrat:ital@1&family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Quicksand:wght@300;400;500;600;700&family=Roboto&family=Shadows+Into+Light&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  height: 100vh;
+  min-height: 600px;
+  padding: 30px;
+  background-image: url(../Images/List-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Poppins', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+body .main-container {
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .main-container .body-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+  }
+}
+
+body .main-container #showItems {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  text-align: center;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 9999;
+  -webkit-animation: show 0.1s ease-in-out forwards;
+          animation: show 0.1s ease-in-out forwards;
+}
+
+body .main-container #showItems div {
+  width: 400px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #333;
+  list-style-type: none;
+  position: relative;
+}
+
+body .main-container #showItems div ul {
+  text-align: left;
+}
+
+body .main-container #showItems div img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+body .main-container #showItems button {
+  width: 30px;
+  aspect-ratio: 1;
+  background-color: #ce1c1c;
+  border: 0;
+  border-radius: 50%;
+  -webkit-box-shadow: -2px 4px 4px dimgray;
+          box-shadow: -2px 4px 4px dimgray;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+}
+
+@-webkit-keyframes show {
+  from {
+    background: none;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    opacity: 0;
+  }
+  to {
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  from {
+    background: none;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    opacity: 0;
+  }
+  to {
+    background: rgba(0, 0, 0, 0.8);
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+    opacity: 1;
+  }
+}
+
+body .main-container #time {
+  font-size: 64px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+body .main-container .welcome-text {
+  font-size: 32px;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+body .main-container .list-container {
+  width: 400px;
+  padding: 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+body .main-container .list-container .input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-margin-after: 1rem;
+          margin-block-end: 1rem;
+}
+
+body .main-container .list-container .input-container input {
+  border-radius: 5px;
+  border: 0;
+  padding: 12px;
+  font-size: 13px;
+}
+
+body .main-container .list-container .input-container #listText {
+  -webkit-margin-end: 5px;
+          margin-inline-end: 5px;
+  width: 210px;
+}
+
+body .main-container .list-container .input-container #listTime {
+  width: 80px;
+}
+
+body .main-container .list-container .input-container .first {
+  font-family: 'Poppins',sans-serif;
+  font-size: 13px;
+  position: absolute;
+  top: 28px;
+  left: 70px;
+  color: rgba(114, 112, 112, 0.8);
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .main-container .list-container .input-container .second {
+  font-family: 'Poppins',sans-serif;
+  font-size: 13px;
+  position: absolute;
+  top: 28px;
+  right: 85px;
+  color: rgba(114, 112, 112, 0.8);
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .main-container .list-container .input-container input:valid + .first {
+  color: #006eff;
+  background-color: #fff;
+  border-radius: 2px;
+  padding-inline: 5px;
+  font-size: 10px;
+  top: 14px;
+}
+
+body .main-container .list-container .input-container input:valid + .second {
+  color: #006eff;
+  background-color: #fff;
+  border-radius: 2px;
+  padding-inline: 5px;
+  font-size: 10px;
+  top: 14px;
+}
+
+body .main-container .list-container .input-container input:focus {
+  outline-color: #006eff;
+  border: 0;
+}
+
+body .main-container .list-container .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+body .main-container .list-container .btn button {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 0;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+body .main-container .list-container .btn button#add {
+  background: rgba(0, 110, 255, 0.8);
+}
+
+body .main-container .list-container .btn button#add:hover {
+  background: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .main-container .list-container .btn button:hover {
+  color: #333;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 2px 4px 6px #dcdddb;
+          box-shadow: 2px 4px 6px #dcdddb;
+}
+
+body .main-container .list-container .btn button#show {
+  background: rgba(51, 51, 51, 0.8);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+body .main-container .list-container .btn button#show:hover {
+  background: #fff;
+}
+
+body .main-container .list-container #return {
+  width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #fff;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  color: #333;
+  font-size: 12px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+body .main-container .list-container #return .logo {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: -8px;
+}
+
+body .main-container .list-container #return .date {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+body .main-container .list-container #return .text {
+  width: 100%;
+  border-top: 1px solid grey;
+  margin-top: -12px;
+  padding: 6px;
+}
+
+body .main-container .list-container #return .text .a {
+  width: 80px;
+  height: 100%;
+  padding: 6px;
+  border-right: 1px solid grey;
+}
+
+body .main-container .list-container #return .text .b {
+  width: 210px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: inline-block;
+}
+/*# sourceMappingURL=styles.css.map */

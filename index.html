@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <title>My To-Do List</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="body-overlay"></div> 
+        <div id="showItems" >
+            <div><img src="./Images/listlogo1.jpg" alt="">
+                <button id="close">X</button>
+                <ul id="showLi"></ul>
+            </div>
+            </div>
+        <div id="time"></div>
+        <div class="welcome-text">
+            <span id="greeting"></span>
+            <span id="name" contenteditable="true"></span>
+        </div>
+        <div class="list-container">
+            <div class="input-container">
+                <input id="listText" type="text" required>
+                <label for="listText" class="first">Add List...</label>
+                <input id="listTime" type="text" required>
+                <label for="listTime" class="second">Time</label>
+            </div>
+            <div class="btn">
+                <button id="add">Add List</button>
+                <button id="show">Show List</button>
+            </div>
+            <div id="return"></div>
+        </div>
+    </div>
+    
+
+
+    <script src="./JS/main.js"></script>
+</body>
+</html>
